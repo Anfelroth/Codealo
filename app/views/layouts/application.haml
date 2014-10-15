@@ -1,0 +1,195 @@
+!!!
+%html
+  %head
+    %title Codealo: Blog sobre Ruby
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}/
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "keywords"}/
+    /[if lte IE 8] <script src="css/ie/html5shiv.js"></script>
+    = javascript_include_tag '/assets/application'
+    = stylesheet_link_tag '/assets/application'
+    
+  %body
+    %noscript
+    
+    /[if lte IE 8] <link rel="stylesheet" href="css/ie/v8.css" />
+    /[if lte IE 9] <link rel="stylesheet" href="css/ie/v9.css" />
+    #header-wrapper
+      .container
+        .row
+          .12u.animatedParent
+            %header#header.animated.swing
+              .inner
+                %h1 Codéalo
+                %nav#nav
+                  %ul
+                    %li.current_page_item
+                      %a{:href => "index.html"} Inicio
+                    %li
+                      %a{:href => "", :onclick => "$('#post').animatescroll({scrollSpeed:3000,easing:'easeOutElastic'});"} Posts
+                    %li
+                      %a.ms-nav-link{"data-ms-enter" => "top", "data-ms-exit" => "bottom", "data-ms-target" => "screen2", :href => "left-sidebar.html"} Curriculum Vitae
+                    %li
+                      %a{:href => "right-sidebar.html"} Sobre mi
+                    %li
+                      %a{:href => "no-sidebar.html"} Contaco
+            / Banner
+            #banner.animatedParent
+              %h2.animated.bounceIn
+                Blog sobre Ruby y mis experiencias
+                %br/
+                como estudiante y programador
+            %a.image.centered
+              %img{:alt => "mouse scroll", :src => "images/scroll.gif"}/
+    / CONTENEDOR POST
+    .wrapper.style3
+      .inner
+        .container
+          .row
+            .8u
+              / LISTA DE ARTICULOS
+              %section.box.article-list
+                #post
+                  %h2.icon.fa-file-text-o Posts Recientes
+                / Excerpt
+                %article.box.excerpt
+                  = yield
+                / Excerpt
+                
+            .4u
+              / Spotlight
+              %section.box.spotlight
+                %h2.icon.fa-file-text-o Spotlight
+                %article
+                  %a.image.featured{:href => "#"}
+                    %img{:alt => "", :src => "images/pic07.jpg"}/
+                  %header
+                    %h3
+                      %a{:href => "#"} Neural Implants
+                    %p The pros and cons. Mostly cons.
+                  %p
+                    Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus semper mod
+                    quisturpis nisi consequat ornare in, hendrerit in lectus semper mod quis eget mi quat etiam
+                    lorem. Phasellus quam turpis, feugiat sed et lorem ipsum dolor consequat dolor feugiat sed
+                    et tempus consequat etiam.
+                  %p
+                    Lorem ipsum dolor quam turpis, feugiat sit amet ornare in, hendrerit in lectus semper
+                    mod quisturpis nisi consequat etiam lorem sed amet quam turpis.
+                  %footer
+                    %a.button.alt.icon.fa-file-o{:href => "#"} Continue Reading
+    / Footer Wrapper
+    #footer-wrapper
+      %footer#footer.container
+        .row
+          .3u
+            / Links
+            %section
+              %h2 Filler Links
+              %ul.divided
+                %li
+                  %a{:href => "#"} Quam turpis feugiat dolor
+                %li
+                  %a{:href => "#"} Amet ornare in hendrerit
+                %li
+                  %a{:href => "#"} Semper mod quisturpis nisi
+                %li
+                  %a{:href => "#"} Consequat etiam phasellus
+                %li
+                  %a{:href => "#"} Amet turpis, feugiat et
+                %li
+                  %a{:href => "#"} Ornare hendrerit lectus
+                %li
+                  %a{:href => "#"} Semper mod quis et dolore
+                %li
+                  %a{:href => "#"} Amet ornare in hendrerit
+                %li
+                  %a{:href => "#"} Consequat lorem phasellus
+                %li
+                  %a{:href => "#"} Amet turpis, feugiat amet
+                %li
+                  %a{:href => "#"} Semper mod quisturpis
+          .3u
+            / Links
+            %section
+              %h2 More Filler
+              %ul.divided
+                %li
+                  %a{:href => "#"} Quam turpis feugiat dolor
+                %li
+                  %a{:href => "#"} Amet ornare in in lectus
+                %li
+                  %a{:href => "#"} Semper mod sed tempus nisi
+                %li
+                  %a{:href => "#"} Consequat etiam phasellus
+            / Links
+            %section
+              %h2 Even More Filler
+              %ul.divided
+                %li
+                  %a{:href => "#"} Quam turpis feugiat dolor
+                %li
+                  %a{:href => "#"} Amet ornare hendrerit lectus
+                %li
+                  %a{:href => "#"} Semper quisturpis nisi
+                %li
+                  %a{:href => "#"} Consequat lorem phasellus
+          .6u
+            / About
+            %section
+              %h2
+                %strong ZeroFour
+                by HTML5 UP
+              %p
+                Hi! This is
+                = succeed "," do
+                  %strong ZeroFour
+                %a{:href => "http://n33.co/"} AJ
+                for
+                = succeed "." do
+                  %a{:href => "http://html5up.net/"} HTML5 UP
+                %a{:href => "http://html5up.net/license/"} Creative Commons Attribution
+                licensed so use it for any personal or commercial project (just credit us
+                for the design!).
+              %a.button.alt.icon.fa-arrow-circle-right{:href => "#"} Learn More
+            / Contact
+            %section
+              %h2 Get in touch
+              %div
+                .row
+                  .6u
+                    %dl.contact
+                      %dt Twitter
+                      %dd
+                        %a{:href => "#"} @untitled-corp
+                      %dt Facebook
+                      %dd
+                        %a{:href => "#"} facebook.com/untitled
+                      %dt WWW
+                      %dd
+                        %a{:href => "#"} untitled.tld
+                      %dt Email
+                      %dd
+                        %a{:href => "#"} user@untitled.tld
+                  .6u
+                    %dl.contact
+                      %dt Address
+                      %dd
+                        1234 Fictional Rd
+                        %br/
+                        Nashville, TN 00000-0000
+                        %br/
+                        USA
+                      %dt Phone
+                      %dd (000) 000-0000
+        .row
+          .12u
+            #copyright
+              %ul.menu
+                %li © Systemarte. Todos los derechos reservados
+                %li
+                  Design:
+                  %a{:href => "http://html5up.net"} HTML5 UP
+    :javascript
+      new WOW().init();
+%html
+  

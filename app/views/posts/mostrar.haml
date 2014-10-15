@@ -1,0 +1,7 @@
+- @title = @post.titulo
+#show
+  .post
+    .title= @post.titulo
+    .date= time_ago_in_words(@post.created_at || Time.now) + ' ago'
+    .body= simple_format(@post.cuerpo)    
+%p= link_to 'Ver todos los posts', url_for(:posts, :index)
