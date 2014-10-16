@@ -23,10 +23,10 @@ postgres = URI.parse(ENV['DATABASE_URL'] || '')
 
 ActiveRecord::Base.configurations[:production] = {
   :adapter  => 'postgresql',
-  :database => 'ddfedd4bb44r8j',
-  :username => 'rlvuctjctihnom',
-  :password => 'IcEF-8Sy2OL9fzyKXmpn9VAedH',
-  :host     => 'ec2-54-83-204-78.compute-1.amazonaws.com'
+  :database => 'dd3dk1kpv35a0t',
+  :username => 'cqcdoaisroupzo',
+  :password => '1CPG5WQdvg4gD8vcNm_7G1ynR3',
+  :host     => 'ec2-54-243-49-82.compute-1.amazonaws.com'
   :port     =>  '5432'
 }
 

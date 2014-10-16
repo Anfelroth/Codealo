@@ -36,6 +36,7 @@ gem 'padrino', '0.12.3'
 
 group :production do
  gem 'pg'
+ 
 end
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
