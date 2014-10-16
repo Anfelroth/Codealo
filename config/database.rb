@@ -19,7 +19,7 @@ ActiveRecord::Base.configurations[:development] = {
 
 }
 
-postgres = URI.parse(ENV['DATABASE_URL'] || '')
+postgres = URI.parse(ENV['HEROKU_POSTGRESQL_ONYX'] || '')
 
 ActiveRecord::Base.configurations[:production] = {
   :adapter  => 'postgresql',
