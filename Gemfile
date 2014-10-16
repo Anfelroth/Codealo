@@ -20,12 +20,12 @@ gem 'haml'
 gem 'activerecord', '>= 3.1', :require => 'active_record'
 group :development do
   gem 'sqlite3'
+  gem 'sinatra-assetpack', :require => 'sinatra/assetpack'
+  gem 'uglifier', '2.1.1'
+  gem 'yui-compressor', '0.9.6'
+  gem 'padrino-sprockets', :require => ['padrino/sprockets'], :git => 'git://github.com/nightsailer/padrino-sprockets.git'
 end
 
-gem 'sinatra-assetpack', :require => 'sinatra/assetpack'
-gem 'uglifier', '2.1.1'
-gem 'yui-compressor', '0.9.6'
-gem 'padrino-sprockets', :require => ['padrino/sprockets'], :git => 'git://github.com/nightsailer/padrino-sprockets.git'
 
 # Test requirements
 gem 'shoulda', :group => 'test'
@@ -37,7 +37,10 @@ gem 'padrino', '0.12.3'
 
 group :production do
  gem 'pg'
- 
+ gem 'sinatra-assetpack', :require => 'sinatra/assetpack'
+ gem 'uglifier', '2.1.1'
+ gem 'yui-compressor', '0.9.6'
+ gem 'padrino-sprockets', :require => ['padrino/sprockets'], :git => 'git://github.com/nightsailer/padrino-sprockets.git'
 end
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'

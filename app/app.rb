@@ -42,7 +42,7 @@ module Codealo
         ]
 
         
-        js_compression  :yui   # :jsmin | :yui | :closure | :uglify
+        js_compression  :uglify  # :jsmin | :yui | :closure | :uglify
         #css_compression :uglify   # :simple | :sass | :yui | :sqwish
       }
     ##
