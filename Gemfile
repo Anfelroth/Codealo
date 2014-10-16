@@ -17,7 +17,10 @@ gem 'rake'
 gem 'bcrypt'
 gem 'haml'
 gem 'activerecord', '>= 3.1', :require => 'active_record'
-gem 'sqlite3'
+group :development do
+  gem 'sqlite3'
+end
+
 gem 'sinatra-assetpack', :require => 'sinatra/assetpack'
 gem 'uglifier', '2.1.1'
 gem 'yui-compressor', '0.9.6'
